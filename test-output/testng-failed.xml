@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="com.hrms.testscripts.TC003">
+        <methods>
+          <include name="opening_browser_login"/>
+          <include name="entering_company_info"/>
+          <include name="logout_from_application"/>
+        </methods>
+      </class> <!-- com.hrms.testscripts.TC003 -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
