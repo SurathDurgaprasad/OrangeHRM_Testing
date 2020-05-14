@@ -5,6 +5,7 @@
 		<classes>
 			<class name="com.hrms.testscripts.TC001" />
 			<class name="com.hrms.testscripts.TC002" />
+			<class name="com.hrms.testscripts.TC003" />	
 		</classes>
-	</test><!-- testng -->>
-</suite><!-- Default suite1 -->>
+	</test>
+</suite>

@@ -5,9 +5,7 @@
     <classes>
       <class name="com.hrms.testscripts.TC003">
         <methods>
-          <include name="opening_browser_login"/>
-          <include name="entering_company_info"/>
-          <include name="logout_from_application"/>
+          <include name="entering_company_info1"/>
         </methods>
       </class> <!-- com.hrms.testscripts.TC003 -->
     </classes>
