@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite parallel="none" name="Failed suite [Default suite1]">
-  <test parallel="none" name="testng(failed)">
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)">
     <classes>
       <class name="com.hrms.testscripts.TC002">
         <methods>
-          <include name="addingEmployee"/>
-          <include name="openbrowser"/>
-          <include name="logout_CloseApplication"/>
-          <include name="deletingEmplyee"/>
+          <include name="addDelEmp"/>
         </methods>
       </class> <!-- com.hrms.testscripts.TC002 -->
-      <class name="com.hrms.testscripts.TC001">
-        <methods>
-          <include name="openingapllication"/>
-          <include name="colseapplication"/>
-        </methods>
-      </class> <!-- com.hrms.testscripts.TC001 -->
     </classes>
-  </test> <!-- testng(failed) -->
-</suite> <!-- Failed suite [Default suite1] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

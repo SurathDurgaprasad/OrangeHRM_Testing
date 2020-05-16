@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="5" passed="5" failed="0" skipped="0">
+<testng-results total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Application opend]]>
@@ -37,20 +37,32 @@
     <line>
       <![CDATA[Application closed]]>
     </line>
+    <line>
+      <![CDATA[Application opend]]>
+    </line>
+    <line>
+      <![CDATA[Login completed]]>
+    </line>
+    <line>
+      <![CDATA[Logout completed]]>
+    </line>
+    <line>
+      <![CDATA[Quiting Browser]]>
+    </line>
   </reporter-output>
-  <suite started-at="2020-05-14T07:45:25Z" name="Default suite1" finished-at="2020-05-14T07:46:40Z" duration-ms="74364">
+  <suite started-at="2020-05-16T02:25:03Z" name="Default suite1" finished-at="2020-05-16T02:27:58Z" duration-ms="174924">
     <groups>
     </groups>
-    <test started-at="2020-05-14T07:45:25Z" name="testng" finished-at="2020-05-14T07:46:40Z" duration-ms="74364">
+    <test started-at="2020-05-16T02:25:03Z" name="testng" finished-at="2020-05-16T02:27:58Z" duration-ms="174924">
       <class name="com.hrms.testscripts.TC001">
-        <test-method is-config="true" signature="openingapllication()[pri:0, instance:com.hrms.testscripts.TC001@f0da945]" started-at="2020-05-14T13:15:25Z" name="openingapllication" finished-at="2020-05-14T13:15:34Z" duration-ms="8917" status="PASS">
+        <test-method is-config="true" signature="openingapllication()[pri:0, instance:com.hrms.testscripts.TC001@5b03b9fe]" started-at="2020-05-16T07:55:03Z" name="openingapllication" finished-at="2020-05-16T07:55:37Z" duration-ms="33477" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Application opend]]>
             </line>
           </reporter-output>
         </test-method> <!-- openingapllication -->
-        <test-method signature="LoginLogout()[pri:0, instance:com.hrms.testscripts.TC001@f0da945]" started-at="2020-05-14T13:15:34Z" name="LoginLogout" finished-at="2020-05-14T13:15:41Z" duration-ms="6984" status="PASS">
+        <test-method signature="LoginLogout()[pri:0, instance:com.hrms.testscripts.TC001@5b03b9fe]" started-at="2020-05-16T07:55:37Z" name="LoginLogout" finished-at="2020-05-16T07:56:03Z" duration-ms="26165" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Login completed]]>
@@ -60,7 +72,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- LoginLogout -->
-        <test-method is-config="true" signature="colseapplication()[pri:0, instance:com.hrms.testscripts.TC001@f0da945]" started-at="2020-05-14T13:15:41Z" name="colseapplication" finished-at="2020-05-14T13:15:42Z" duration-ms="277" status="PASS">
+        <test-method is-config="true" signature="colseapplication()[pri:0, instance:com.hrms.testscripts.TC001@5b03b9fe]" started-at="2020-05-16T07:56:03Z" name="colseapplication" finished-at="2020-05-16T07:56:03Z" duration-ms="308" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Application closed]]>
@@ -69,30 +81,14 @@
         </test-method> <!-- colseapplication -->
       </class> <!-- com.hrms.testscripts.TC001 -->
       <class name="com.hrms.testscripts.TC002">
-        <test-method is-config="true" signature="openbrowser()[pri:0, instance:com.hrms.testscripts.TC002@5b03b9fe]" started-at="2020-05-14T13:16:04Z" name="openbrowser" finished-at="2020-05-14T13:16:11Z" duration-ms="7396" status="PASS">
+        <test-method signature="addDelEmp()[pri:0, instance:com.hrms.testscripts.TC002@593aaf41]" started-at="2020-05-16T07:56:03Z" name="addDelEmp" finished-at="2020-05-16T07:56:46Z" duration-ms="43038" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Application opend]]>
             </line>
-          </reporter-output>
-        </test-method> <!-- openbrowser -->
-        <test-method signature="admin_Login()[pri:0, instance:com.hrms.testscripts.TC002@5b03b9fe]" started-at="2020-05-14T13:16:11Z" name="admin_Login" finished-at="2020-05-14T13:16:16Z" duration-ms="5228" status="PASS">
-          <reporter-output>
             <line>
               <![CDATA[Login completed]]>
             </line>
-          </reporter-output>
-        </test-method> <!-- admin_Login -->
-        <test-method signature="addingEmployee()[pri:0, instance:com.hrms.testscripts.TC002@5b03b9fe]" started-at="2020-05-14T13:16:16Z" name="addingEmployee" finished-at="2020-05-14T13:16:34Z" duration-ms="17432" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addingEmployee -->
-        <test-method signature="deletingEmplyee()[pri:0, instance:com.hrms.testscripts.TC002@5b03b9fe]" started-at="2020-05-14T13:16:34Z" name="deletingEmplyee" finished-at="2020-05-14T13:16:39Z" duration-ms="5604" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deletingEmplyee -->
-        <test-method is-config="true" signature="logout_CloseApplication()[pri:0, instance:com.hrms.testscripts.TC002@5b03b9fe]" started-at="2020-05-14T13:16:39Z" name="logout_CloseApplication" finished-at="2020-05-14T13:16:40Z" duration-ms="311" status="PASS">
-          <reporter-output>
             <line>
               <![CDATA[Logout completed]]>
             </line>
@@ -100,10 +96,10 @@
               <![CDATA[Application closed]]>
             </line>
           </reporter-output>
-        </test-method> <!-- logout_CloseApplication -->
+        </test-method> <!-- addDelEmp -->
       </class> <!-- com.hrms.testscripts.TC002 -->
       <class name="com.hrms.testscripts.TC003">
-        <test-method signature="entering_company_info1()[pri:0, instance:com.hrms.testscripts.TC003@e15b7e8]" started-at="2020-05-14T13:15:42Z" name="entering_company_info1" finished-at="2020-05-14T13:16:04Z" duration-ms="22173" status="PASS">
+        <test-method signature="entering_company_info1()[pri:0, instance:com.hrms.testscripts.TC003@54bff557]" started-at="2020-05-16T07:56:46Z" name="entering_company_info1" finished-at="2020-05-16T07:57:15Z" duration-ms="28127" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Application opend]]>
@@ -120,6 +116,24 @@
           </reporter-output>
         </test-method> <!-- entering_company_info1 -->
       </class> <!-- com.hrms.testscripts.TC003 -->
+      <class name="com.hrms.testscripts.TC004">
+        <test-method signature="windowHandle()[pri:0, instance:com.hrms.testscripts.TC004@bae7dc0]" started-at="2020-05-16T07:57:15Z" name="windowHandle" finished-at="2020-05-16T07:57:58Z" duration-ms="43773" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Application opend]]>
+            </line>
+            <line>
+              <![CDATA[Login completed]]>
+            </line>
+            <line>
+              <![CDATA[Logout completed]]>
+            </line>
+            <line>
+              <![CDATA[Quiting Browser]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- windowHandle -->
+      </class> <!-- com.hrms.testscripts.TC004 -->
     </test> <!-- testng -->
   </suite> <!-- Default suite1 -->
 </testng-results>

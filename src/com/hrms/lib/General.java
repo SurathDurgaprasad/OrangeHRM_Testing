@@ -1,6 +1,7 @@
 package com.hrms.lib;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -21,6 +22,7 @@ public class General extends Global {
 			System.setProperty(driverKey, driverValue);
 			driver = new ChromeDriver();
 		}
+		driver.manage().window().maximize();
 		driver.navigate().to(url);
 
 		System.out.println("Application opened");
@@ -35,6 +37,14 @@ public class General extends Global {
 		Reporter.log("Application closed");
 		Log.info("Application closed");
 	}
+	public void quiteAppliction() {
+		driver.quit();
+
+		System.out.println("Quiting Browser");
+		Reporter.log("Quiting Browser");
+		Log.info("Quiting Browser");
+	}
+
 
 	public void login() throws Exception {
 		driver.findElement(By.name("txtUserName")).sendKeys(username);
@@ -202,7 +212,6 @@ public class General extends Global {
 		driver.findElement(By.xpath("//span[text()='General']")).click();
 		driver.switchTo().frame("rightMenu");
 		Thread.sleep(3000);
-		
 
 		file = new FileInputStream(general_form_location);
 		wb = Workbook.getWorkbook(file);
@@ -231,7 +240,7 @@ public class General extends Global {
 		zip = st.getCell(10, 1).getContents();
 
 		comments = st.getCell(11, 1).getContents();
-		
+
 		driver.findElement(By.xpath("//input[@id = 'editBtn']")).click();
 //
 		driver.findElement(By.xpath("//input[@id = 'txtCompanyName']")).clear();
@@ -246,10 +255,9 @@ public class General extends Global {
 		driver.findElement(By.xpath("//input[@id='cmbCity']")).clear();
 		driver.findElement(By.xpath("//input[@id='txtState']")).clear();
 		driver.findElement(By.xpath("//input[@id='txtZIP']")).clear();
-		driver.findElement(By.xpath("//*[@id = 'txtComments']")).clear();	
+		driver.findElement(By.xpath("//*[@id = 'txtComments']")).clear();
 //
-		
-//		Thread.sleep(3000);
+
 		driver.findElement(By.xpath("//input[@id = 'txtCompanyName']")).sendKeys(company_info);
 		driver.findElement(By.xpath("//input[@id='txtTaxID']")).sendKeys(tax_id);
 		driver.findElement(By.xpath("//input[@id='txtNAICS']")).sendKeys(naics);
@@ -271,11 +279,14 @@ public class General extends Global {
 	public void addEmp() throws Exception {
 		driver.findElement(By.xpath("//span[text() = 'Add Employee']")).click();
 
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		
 		driver.switchTo().frame("rightMenu");
 		System.out.println("Entered into frame");
 
-		Thread.sleep(4000);
-		driver.findElement(By.name("txtEmpLastName")).sendKeys("Bond");
+		//driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+Thread.sleep(5000);
+		driver.findElement(By.cssSelector("#txtEmpLastName.formInputText")).sendKeys("Bond");
 		System.out.println("Entered Last name is done ");
 
 		driver.findElement(By.name("txtEmpFirstName")).sendKeys("Bond");
@@ -310,16 +321,13 @@ public class General extends Global {
 	}
 
 	public void delEmp() throws Exception {
-		driver.findElement(By.xpath("//*[@id=\"pim\"]/ul/li[1]/a/span")).click();
+		driver.findElement(By.xpath("//span[text() = 'Employee List']")).click();
 
 		driver.switchTo().frame("rightMenu");
 		System.out.println("Entered into frame");
 		Thread.sleep(3000);
 
-		Select dropdown_box = new Select(driver.findElement(By.xpath("//*[@id=\"loc_code\"]")));
-
-		driver.manage().timeouts().implicitlyWait(500, TimeUnit.MILLISECONDS);
-
+		Select dropdown_box = new Select(driver.findElement(By.xpath("//select[@id='loc_code']")));
 		dropdown_box.selectByValue("1");
 		System.out.println("Dropdown Selection is done");
 
@@ -349,5 +357,31 @@ public class General extends Global {
 		System.out.println("out of frame");
 		System.out.println("Deleting the emp");
 		Log.info("Delting the employee done");
+	}
+
+	public void clickingFourm() {
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
+		driver.findElement(By.xpath("//span[text()='Forum']")).click();
+		wind = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(wind.get(1));
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
+		driver.switchTo().window(wind.get(0));
+		
+
+	}
+	public void clickingBlog(){
+		driver.findElement(By.xpath("//span[text()='Blog']")).click();
+		wind = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(wind.get(2));
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.getTitle());
+		Select dropdownWindow2 = new Select(driver.findElement(By.xpath("//select[@id = 'cat-chooser']")));
+		dropdownWindow2.selectByVisibleText("Open Source");
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		driver.findElement(By.xpath("//div//a[text()='OrangeHRM Announces the release of Open Source 4.0']")).click();
+		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+		driver.switchTo().window(wind.get(0));
 	}
 }

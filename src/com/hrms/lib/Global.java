@@ -1,6 +1,7 @@
 package com.hrms.lib;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -13,6 +14,8 @@ public class Global {
 	public WebDriver driver = null;
 
 	public Actions action_obj = null;
+	
+	public  ArrayList<String> wind;
 
 	public String driverKey = "webdriver.chrome.driver";
 

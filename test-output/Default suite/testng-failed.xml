@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="com.hrms.testscripts.TC003">
+      <class name="com.hrms.testscripts.TC002">
         <methods>
-          <include name="entering_company_info1"/>
+          <include name="addDelEmp"/>
         </methods>
-      </class> <!-- com.hrms.testscripts.TC003 -->
+      </class> <!-- com.hrms.testscripts.TC002 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

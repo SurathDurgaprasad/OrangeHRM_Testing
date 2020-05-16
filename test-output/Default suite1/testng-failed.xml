@@ -3,6 +3,12 @@
 <suite parallel="none" name="Failed suite [Default suite1]">
   <test parallel="none" name="testng(failed)">
     <classes>
+      <class name="com.hrms.testscripts.TC001">
+        <methods>
+          <include name="openingapllication"/>
+          <include name="colseapplication"/>
+        </methods>
+      </class> <!-- com.hrms.testscripts.TC001 -->
       <class name="com.hrms.testscripts.TC002">
         <methods>
           <include name="addingEmployee"/>
@@ -11,12 +17,6 @@
           <include name="deletingEmplyee"/>
         </methods>
       </class> <!-- com.hrms.testscripts.TC002 -->
-      <class name="com.hrms.testscripts.TC001">
-        <methods>
-          <include name="openingapllication"/>
-          <include name="colseapplication"/>
-        </methods>
-      </class> <!-- com.hrms.testscripts.TC001 -->
     </classes>
   </test> <!-- testng(failed) -->
 </suite> <!-- Failed suite [Default suite1] -->

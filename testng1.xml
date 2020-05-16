@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Default suite1">
-	<test name="testng" verbose = "2">
-		<classes>
+	<test name="testng" verbose = "10">
+	<classes>
 			<class name="com.hrms.testscripts.TC001" />
 			<class name="com.hrms.testscripts.TC002" />
 			<class name="com.hrms.testscripts.TC003" />	
+			<class name="com.hrms.testscripts.TC004" />	
+
 		</classes>
 	</test>
 </suite>
